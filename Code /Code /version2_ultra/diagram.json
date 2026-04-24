@@ -1,9 +1,11 @@
+
 {
   "version": 1,
-  "author": "chatgpt",
+  "author": "rami",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+   
     {
       "type": "wokwi-hc-sr04",
       "id": "ultra",

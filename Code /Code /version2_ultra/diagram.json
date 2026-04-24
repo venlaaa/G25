@@ -1,17 +1,15 @@
-
 {
   "version": 1,
   "author": "rami",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": {} },
-   
     {
       "type": "wokwi-hc-sr04",
       "id": "ultra",
       "top": -123.3,
       "left": 178.3,
-      "attrs": { "distance": "53" }
+      "attrs": { "distance": "25" }
     },
     { "type": "wokwi-servo", "id": "servo", "top": 103.6, "left": 201.6, "attrs": {} },
     { "type": "wokwi-led", "id": "led", "top": -20, "left": -120, "attrs": { "color": "red" } },
@@ -28,10 +26,10 @@
     [ "pico:GND", "ultra:GND", "black", [] ],
     [ "pico:GP14", "ultra:TRIG", "blue", [ "h-34.8", "v35.25", "h290.1" ] ],
     [ "pico:GP12", "ultra:ECHO", "blue", [ "v-31.95", "h265.3" ] ],
-    [ "pico:GP15", "servo:PWM", "green", [ "v16.05", "h194" ] ],
     [ "pico:VBUS", "servo:V+", "red", [ "h24", "v25.65", "h38.4", "v121.1" ] ],
     [ "pico:GND", "servo:GND", "black", [] ],
     [ "pico:GP13", "resistor:1", "green", [] ],
+    [ "pico:GP15", "servo:PWM", "green", [] ],
     [ "resistor:2", "led:A", "green", [] ],
     [ "led:C", "pico:GND", "black", [] ],
     [ "servo:GND", "pico:GND.8", "black", [ "h0" ] ],

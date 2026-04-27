@@ -13,7 +13,7 @@ servo = PWM(Pin(15))
 servo.freq(50)
 
 current_angle = 0 #default angle
-open_angle = 90 #angle of gear rotation
+open_angle = 180 #angle of gear rotation
 moving_outward = True #keeps track of direction for the gear
 is_moving = False # keeps track of if moving parts are moving
 
@@ -66,12 +66,12 @@ while True:
            
             is_moving = True
             if moving_outward:
-                move_servo(0, 90) #changing this will change the rotation of the gear
+                move_servo(0, 180) #changing this will change the rotation of the gear
                 led.value(1)
                 current_angle = 90
                 moving_outward = False
             else:
-                move_servo(90, 0) # as before mentioned but in the other direction
+                move_servo(180, 0) # as before mentioned but in the other direction
                 led.value(0)
                 current_angle = 0
                 moving_outward = True
